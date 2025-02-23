@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# datime: see what time it is using date(1)
+
+while true; do date; sleep 1; done

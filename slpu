@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# slpu: update and upgrade slackpkg(8) packages
+# requires /usr/sbin to be in PATH
+
+/usr/bin/doas /usr/sbin/slackpkg update;
+/usr/bin/doas /usr/sbin/slackpkg install-new;
+/usr/bin/doas /usr/sbin/slackpkg upgrade-all;
+/usr/bin/doas /usr/sbin/slackpkg clean-system;
+
+# these should only be run if you use elilo
+# useful in case there is a kernel upgrade
+/usr/bin/doas /usr/sbin/geninitrd;
+/usr/bin/doas /usr/sbin/eliloconfig;

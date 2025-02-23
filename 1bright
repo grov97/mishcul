@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# bright: change the brightness using xrandr(1)
+# Scripts with names starting with 1 are used to do the job once only
+
+d=$(xrandr --current --verbose | grep -m 1 -w connected | cut -d " " -f1);
+echo "How bright (0 to 1 (more is possible but not recommended because too bright))?";
+read b;
+echo "Setting the brightness...";
+xrandr --output $d --brightness $b;
+echo "Done!";
