@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# bright: change the brightness using xrandr(1)
+
+while true; do clear; /home/rov/mishcul/1bright; sleep 1; done

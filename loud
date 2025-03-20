@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# loud: change the volume/loudness using amixer(1)
+
+while true; do clear; /home/rov/mishcul/1loud; sleep 1; done

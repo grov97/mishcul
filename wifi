@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# wifi: change the Wi-Fi network using nmcli(1)
+
+while true; do clear; /home/rov/mishcul/1wifi; sleep 1; done

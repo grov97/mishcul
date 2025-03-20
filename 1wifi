@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# wifi: change the Wi-Fi network using nmcli(1)
+# Scripts with names starting with 1 are used to do the job once only
+
+echo "SSID (Wi-Fi network name)?";
+read s;
+echo "Password?";
+read p;
+echo "Connecting to $s...";
+doas nmcli device wifi connect $s password $p;
+echo "Done!";

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# shut: shutdown and poweroff the computer
+
+doas shutdown now && doas poweroff;

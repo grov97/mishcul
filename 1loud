@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# loud: change the volume/loudness using amixer(1)
+# Scripts with names starting with 1 are used to do the job once only
+
+echo "How loud (0 to 100)?";
+read l;
+echo "Which control, Master or Capture (answer 1 for Master, 2 for Capture)?";
+read c;
+if [ $c -eq 1 ]
+then
+echo "Setting loudness for Master to $l...";
+amixer set Master $l%;
+echo "Done!";
+elif [ $c -eq 2 ]
+then
+echo "Setting loudness for Capture to $l...";
+amixer set Capture $l%;
+echo "Done!";
+else
+echo "Enter 1 for Master, or 2 for Capture";
+fi

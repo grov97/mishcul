@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# monbat: monitor the battery using acpi(1)
+
+while true; do acpi; sleep 1; done;
